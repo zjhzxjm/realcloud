@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '_%ehq(=%24v9h*gtouc@kc^sc+0067xn0=a(fq4cm8a8a$i1wa'
+SECRET_KEY = 'l#k6x7@zjmr3@e$r4+3n&oo1q6!yue=@(8sebad!y@8t0l1x!2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -55,9 +55,7 @@ ROOT_URLCONF = 'realcloud.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            os.path.join(BASE_DIR, "templates")
-        ],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -106,7 +104,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh_CN'
 
 TIME_ZONE = 'Asia/Shanghai'
 

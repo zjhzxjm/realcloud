@@ -1,5 +1,6 @@
 from os import environ
 from .wooey_settings import *
+from django.utils.translation import ugettext_lazy as _
 # This file is where the user can override and customize their installation of wooey
 
 # Wooey Apps - add additional apps here after the initial install (remember to follow everything by a comma)
@@ -78,10 +79,10 @@ STATIC_URL = '/static/'
 #     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 #
 ALLOWED_HOSTS = (
-    'localhost',
-    '127.0.0.1',
+#     'localhost',
+#     '127.0.0.1',
+#     "wooey.herokuapp.com",# put your site here
     '192.168.0.106',
-    # "wooey.herokuapp.com",# put your site here
 )
 #
 # AWS_CALLING_FORMAT = VHostCallingFormat
@@ -117,8 +118,16 @@ ALLOWED_HOSTS = (
 
 AUTHENTICATION_BACKEND = 'django.contrib.auth.backends.ModelBackend'
 
-WOOEY_SITE_NAME = 'RealCloud'
-WOOEY_SITE_TAG = 'The cloud platform of microbiome analysis'
+WOOEY_ALLOW_ANONYMOUS = False
 WOOEY_REGISTER_URL = False
-WOOEY_SCRIPT_DIR = 'realbio_scripts'
+WOOEY_DEFAULT_SCRIPT_GROUP = 'RealBio Scripts'
 WOOEY_FILE_DIR = 'realbio_files'
+WOOEY_SCRIPT_DIR = 'realbio_scripts'
+WOOEY_SITE_NAME = _('RealCloud')
+WOOEY_SITE_TAG = _('The platform of microbiome data analysis')
+USE_MODELTRANSLATION = True
+# Supported languages
+LANGUAGES = (
+    ('en', _('English')),
+    ('zh_CN', _(u'中文')),
+)
